@@ -13,4 +13,4 @@ if (number > 0):
 else:
 	last_digit = (number % -10) * -1
 	if(last_digit > 0 and last_digit != 0):
-		print (str(last_digit) + " and is less than 6 and not 0")
+		print (str(last_digit) * -1 + " and is less than 6 and not 0")
