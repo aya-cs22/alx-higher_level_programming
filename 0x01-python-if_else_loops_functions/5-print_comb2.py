@@ -4,4 +4,6 @@ while num < 100:
     print(f"{str(num).zfill(2)}".format(num), end="")
     if num != 99:
         print(", " ,end ="")
+    else:
+        print(" ")
     num += 1
