@@ -5,4 +5,3 @@ while char <= 'z':
         continue
     print(f"{char}".format(char), end="")
     char = chr(ord(char) + 1)
-2
