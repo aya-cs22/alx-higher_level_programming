@@ -1,3 +1,6 @@
 #!/usr/bin/python3
-def uppercase(str):
-    print(f"{str.capitalize()}".format(str))
+def uppercase(input_str):
+    result = ""
+    for word in input_str.split():
+        result += word.capitalize() + ' '
+        print(result.strip())
