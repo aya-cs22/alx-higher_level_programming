@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 def uppercase(str):
-    print(str.capitalize())
+    print(f"str.capitalize()".format(str))
