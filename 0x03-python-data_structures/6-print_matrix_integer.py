@@ -8,4 +8,4 @@ def print_matrix_integer(matrix=[[]]):
                 if x == len(i) - 1:
                     print('{:d}'.format(i[x]), end='\n')
                 else:
-                    print('{:d} '.format(i[x]), end=' ')
+                    print('{:d}'.format(i[x]), end=' ')
