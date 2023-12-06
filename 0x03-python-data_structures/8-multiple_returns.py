@@ -1,8 +1,8 @@
-#!/usr/bin/pesycode
-def magical_returns(words):
-    sparkle = len(words)
-    if words is None or len(words) == 0:
-        enchantment = None
+#!/usr/bin/python3
+def multiple_returns(sentence):
+    length = len(sentence)
+    if sentence is None or len(sentence) == 0:
+        first_char = None
     else:
-        enchantment = words[0]
-    return sparkle, enchantment
+        first_char = sentence[0]
+    return length, first_char
