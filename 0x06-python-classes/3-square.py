@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """Square module"""
 
 
@@ -19,6 +19,8 @@ class Square:
         elif size < 0:
             raise ValueError("size must be >= 0")
         else:
-            self.__size = size
+            self._size = size
+
     def area(self):
-        return self.__size * self.__size
+        """Calculate the area of the square."""
+        return self._size ** 2
