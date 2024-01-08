@@ -16,7 +16,7 @@ class Square:
         """
         self.__size = size
 
-    @property 
+    @property
     def size(self):
         return self.__size
 
@@ -30,11 +30,11 @@ class Square:
             self.__size = value
 
     def area(self):
-        """Public instance method calculate Square Area."""
+        """Public instance method to calculate Square Area."""
         return self.size * self.size
 
     def my_print(self):
-        """prints the square"""
+        """Prints the square."""
         for i in range(self.size):
             for j in range(self.size):
                 print("#", end='')
