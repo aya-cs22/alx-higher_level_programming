@@ -2,7 +2,7 @@
 """Square module"""
 
 
-class squar:
+class Square:
     """Defines a square"""
 
     def __init__(self, size=0):
@@ -37,5 +37,5 @@ class squar:
         """prints the square"""
         for i in range(self.size):
             for j in range(self.size):
-                print("#", end='\n')
-        print()
+                print("#", end='')
+            print()
