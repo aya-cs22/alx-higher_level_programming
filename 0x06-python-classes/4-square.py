@@ -14,21 +14,21 @@ class Square:
             TypeError: If size is not an integer.
             ValueError: If size is less than zero.
         """
+        self.__size = size
 
-        @property
-        def size(self):
-            return self.__size
+    @property
+    def size(self):
+        return self.__size
 
-        @size.setter
-        def size(self, value):
-            if not isinstance(value, int):
-                raise TypeError("size must be an integer")
-            elif value < 0:
-                raise ValueError("size must be >= 0")
-            else:
-                self.__size = value
+    @size.setter
+    def size(self, value):
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
+        else:
+            self.__size = value
 
-        def area(self):
-            """Public instance method calculate Square Area."""
-
-            return self.size * self.size
+    def area(self):
+        """Public instance method to calculate Square Area."""
+        return self.__size * self.__size
