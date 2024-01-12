@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 class Rectangle:
     """Define the Rectangle."""
 
@@ -39,12 +40,14 @@ class Rectangle:
             self.__height = value
 
     def area(self):
+        """returns the area of the rectangle"""
         return self.width * self.height
 
     def perimeter(self):
-        if self.width == 0 or self.height == 0:
+        """returns the perimeter of the rectangle"""
+        if self.__width == 0 or self.__height == 0:
             return 0
-        return (self.width + self.height) * 2
+        return (self.__width + self.__height) * 2
 
     def __str__(self):
         str = ""
