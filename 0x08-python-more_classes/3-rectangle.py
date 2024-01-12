@@ -45,11 +45,11 @@ class Rectangle:
             return (self.__width + self.__height) * 2
 
     def __str__(self):
-        string = ""
+        str = ""
         if self.width == 0 or self.height == 0:
             return ""
-        for i in range(0, self.height):
-            string += '#' * self.width
-            if i < self.height - 1:
-                string += '\n'
-        return string
+        for row in range(self.height):
+            str += '#' * self.width
+            if row < self.height - 1:
+                str += '\n'
+        return str
