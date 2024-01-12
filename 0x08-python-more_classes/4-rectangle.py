@@ -34,19 +34,25 @@ class Rectangle:
         else:
             self.__height = value
     def area(self):
-        """returns the area of the rectangle"""
         return self.__width * self.__height
+
     def perimeter(self):
-        if self.__height == 0 or self.__width == 0:
+        if self.__width is 0 or self.__height is 0:
             return 0
         else:
-            return (self.__width + self.__height) * 2
-    def __str__(self):
+            return (self.__width * 2) + (self.__height * 2)
+
+    def _draw_rectangle(self):
         str = ""
-        if self.width == 0 or self.height == 0:
-            return ""
-        for row in range(self.height):
-            str += "#" * self.width + '\n'
+        for row in range(self.__height):
+            for col in range(self.__width):
+                str += '#'
+            if self.__width != 0 and row < (self.__height - 1):
+                str += '\n'
         return str
+
+    def __str__(self):
+        return self._draw_rectangle()
+
     def __repr__(self):
-        return "Rectangle({}, {})".format(self.__width, self.__height)
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
