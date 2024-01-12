@@ -31,19 +31,23 @@ class Rectangle:
         else:
             raise TypeError("height must be an integer")
     def area(self):
-        """returns the area of the rectangle"""
-        return self.__width * self.__height
+        return self.width * self.height
+
     def perimeter(self):
-        if self.__height == 0 or self.__width == 0:
+        if self.width == 0 or self.height == 0:
             return 0
         else:
-            return (self.__width + self.__height) * 2
+            return (self.width + self.height) * 2
+
     def __str__(self):
-        str = ""
+        string = ""
         if self.width == 0 or self.height == 0:
             return ""
-        for row in range(self.height):
-            str += "#" * self.width + '\n'
-        return str
+        for i in range(0, self.height):
+            string += '#' * self.width
+            if i < self.height - 1:
+                string += '\n'
+        return string
+
     def __repr__(self):
         return "Rectangle({}, {})".format(self.__width, self.__height)
