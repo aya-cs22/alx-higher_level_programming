@@ -1,19 +1,21 @@
+#!/usr/bin/python3
+
 class Rectangle:
-    """define the Rectangle"""
+    """Define the Rectangle."""
 
     def __init__(self, width=0, height=0):
-        """Initializes the Rectangle"""
+        """Initializes the Rectangle."""
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """get for the private instance attr width"""
+        """Get for the private instance attribute width."""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """set for the private instance attr width"""
+        """Set for the private instance attribute width."""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         elif value < 0:
@@ -23,19 +25,19 @@ class Rectangle:
 
     @property
     def height(self):
-        """"get for the private instance attr height"""
+        """Get for the private instance attribute height."""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """set for the private instance attr height"""
+        """Set for the private instance attribute height."""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         elif value < 0:
             raise ValueError("height must be >= 0")
         else:
             self.__height = value
-    
+
     def area(self):
         return self.width * self.height
 
@@ -43,6 +45,7 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return 0
         return (self.width + self.height) * 2
+
     def __str__(self):
         str = ""
         if self.__height > 0 and self.__width > 0:
