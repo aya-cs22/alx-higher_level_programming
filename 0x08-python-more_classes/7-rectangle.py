@@ -57,7 +57,7 @@ class Rectangle:
         str = ""
         if self.width == 0 or self.height == 0:
             return ""
-        for row in range(self.height):
+        for row in range(0, self.height):
             str += str(self.print_symbol) * self.width
             if row < self.height - 1:
                 str += '\n'
