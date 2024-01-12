@@ -13,7 +13,6 @@ class Rectangle:
     def width(self):
         """Get for the private instance attribute width."""
         return self.__width
-
     @width.setter
     def width(self, value):
         """Set for the private instance attribute width."""
@@ -23,12 +22,10 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         else:
             self.__width = value
-
     @property
     def height(self):
         """Get for the private instance attribute height."""
         return self.__height
-
     @height.setter
     def height(self, value):
         """Set for the private instance attribute height."""
@@ -38,17 +35,14 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = value
-
     def area(self):
         """returns the area of the rectangle"""
         return self.width * self.height
-
     def perimeter(self):
-        """returns the perimeter of the rectangle"""
-        if self.__width == 0 or self.__height == 0:
+        if self.__height == 0 and self.__width == 0:
             return 0
-        return (self.width + self.height) * 2
-
+        else:
+            return (self.width + self.height) * 2
     def __str__(self):
         str = ""
         if self.width == 0 or self.height == 0:
@@ -56,3 +50,6 @@ class Rectangle:
         for row in range(self.height):
             str += "#" * self.width + '\n'
         return str
+    def __repr__(self):
+        return "Rectangle({}, {})".format(self.__width, self.__height)
+        
