@@ -1,12 +1,13 @@
 #!/usr/bin/python3
-"""empty class called rectangle"""
+"""Define the Rectangle."""
 
 
 class Rectangle:
-    """class that does nothing"""
+    """Define the Rectangle."""
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
+        """Initializes the Rectangle."""
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
