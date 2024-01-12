@@ -47,18 +47,18 @@ class Rectangle:
             return (self.width + self.height) * 2
 
     def __str__(self):
-        string = ""
+        str = ""
         if self.width == 0 or self.height == 0:
             return ""
-        for i in range(0, self.height):
-            string += '#' * self.width
-            if i < self.height - 1:
-                string += '\n'
-        return string
+        for row in range(self.height):
+            str += '#' * self.width
+            if row < self.height - 1:
+                str += '\n'
+        return str
 
     def __repr__(self):
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
-        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
