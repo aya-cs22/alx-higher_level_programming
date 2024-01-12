@@ -44,22 +44,21 @@ class Rectangle:
             self.__height = value
 
     def area(self):
-        """returns the area of the rectangle"""
-        return self.__width * self.__height
+        return self.width * self.height
 
     def perimeter(self):
-        if self.__height == 0 or self.__width == 0:
+        if self.width == 0 or self.height == 0:
             return 0
         else:
-            return (self.__width + self.__height) * 2
+            return (self.width + self.height) * 2
 
     def __str__(self):
         string = ""
         if self.width == 0 or self.height == 0:
             return ""
-        for row in range(0, self.height):
+        for i in range(0, self.height):
             string += str(self.print_symbol) * self.width
-            if row < self.height - 1:
+            if i < self.height - 1:
                 string += '\n'
         return string
 
@@ -73,9 +72,8 @@ class Rectangle:
     def bigger_or_equal(rect_1, rect_2):
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
-        if not isinstance(rect_2, Rectangle):
+        if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
-
         if rect_1.area() >= rect_2.area():
             return rect_1
         else:
