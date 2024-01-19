@@ -7,7 +7,7 @@
 12
 >>> add(5, 9.5)
 14
->>> add("aya", 2)
+>>> add("5", 2)
 Traceback (most recent call last):
     ...
 ValueError: a must be an integer
