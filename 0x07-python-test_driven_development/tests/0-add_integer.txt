@@ -11,6 +11,8 @@
 9
 >>> add_integer(10.5, -2)
 8
+>>> add_integer(2)
+100
 >>> add_integer("5", 2)
 Traceback (most recent call last):
 ...
