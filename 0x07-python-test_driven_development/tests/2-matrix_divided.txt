@@ -6,4 +6,4 @@
 >>> print(matrix_divided(matrix, 5))
 Traceback(most recent call last)
 ...
-TypeError: matrix must be a matrix (array of arrays of integers/floats)
+TypeError: All elements of the matrix must be integers or floats
