@@ -9,7 +9,7 @@ def text_indentation(text):
     for char in text:
         print(char, end="")
         if char in ".?:":  # لو كان الحرف من العلامات المحددة
-            print("\n")  # تطبع مسافتين
+            print()  # تطبع مسافتين
 if __name__ == "__main__":
     import doctest
     doctest.testfile("tests/5-text_indentation.txt")      
