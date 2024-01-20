@@ -7,6 +7,7 @@ def text_indentation(text):
         raise TypeError("text must be a string")
     for char in text:
         if char in [".", "?", ":"]:
-            print()  # Print two newlines
-        print(char, end="")  # Print newline if the text didn't end with a newline
+            print()
+            print()
+        print(char, end="")
         
