@@ -1,13 +1,9 @@
 #!/usr/bin/python3
-"""
-class MyList that inherits from list
-
-has a method print a sorted list
-"""
-
+""""Module with the method lookpu"""
 
 class MyList(list):
-    """ prints the list, but sorted (ascending sort)"""
+    """"a class MyList that inherits from list"""
+
     def print_sorted(self):
-        """print list"""
-        print(sorted(self))
+        """"print list"""
+        print (sorted(list(self)))
