@@ -1,16 +1,9 @@
 #!/usr/bin/python3
-"""
-===========================
-Module with class MyList
-===========================
-"""
-
+""""Module with the method lookpu"""
 
 class MyList(list):
-    """Class with method print_sorted"""
-    pass
+    """"a class MyList that inherits from list"""
 
     def print_sorted(self):
-        """Methot that sorted a list"""
-
-        print(sorted(list(self)))
+        """"print list"""
+        print (sorted(list(self)))
