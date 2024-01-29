@@ -1,23 +1,12 @@
 #!/usr/bin/python3
-"""
-check  if the object is
-an instance of a class that inherited
-(directly or indirectly) from the specified class
-
-return true if it is, false otherwise
-"""
+""""Module with the method lookpu"""
 
 
-def is_subclass_of(obj, a_class):
-    """
-    Returns True if the object is an instance of a class that inherited (directly or indirectly)
-    from the specified class; otherwise False.
-
-    Parameters:
-    - obj: The object to check.
-    - a_class: The specified class.
-
-    Returns:
-    - True if obj is an instance of a subclass of a_class, otherwise False.
-    """
-    return any(a_class in class_.__mro__ for class_ in obj.__class__.__mro__[1:])
+def is_kind_of_class(obj, a_class):
+    '''check if obj is subclass of a_class'''
+    if isinstance(obj, a_class):
+        return True
+    for subclass in obj.__class__.__mro__[1:]:
+        if subclass == a_class:
+            return True
+    return False
