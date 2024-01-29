@@ -20,5 +20,4 @@ def is_subclass_of(obj, a_class):
     Returns:
     - True if obj is an instance of a subclass of a_class, otherwise False.
     """
-    # Check if a_class is in the method resolution order of obj's class
     return any(a_class in class_.__mro__ for class_ in obj.__class__.__mro__[1:])
