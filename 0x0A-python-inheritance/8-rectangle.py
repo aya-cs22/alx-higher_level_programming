@@ -17,7 +17,7 @@ class BaseGeometry:
 """"module with class Rectangle"""
 
 
-class Rectangle:
+class Rectangle(BaseGeometry):
     """"Rectangle class"""
     def __init__(self, width, height):
         self.integer_validator("width", width)
