@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""""method reads a file method"""
+""""reads a file method"""
 
 
 def read_file(filename=""):
