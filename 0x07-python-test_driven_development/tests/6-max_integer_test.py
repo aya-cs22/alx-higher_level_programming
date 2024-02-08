@@ -31,7 +31,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([-1, -2, -7, -4]), -1)
 
     def test_max_at_the_empty(self):
-        """"testing for one negative number in the list"""
+        """"testing for empt number in the list"""
         self.assertEqual(max_integer([]), None)
 
     def test_max_at_the_empty(self):
