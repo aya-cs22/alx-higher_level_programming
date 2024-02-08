@@ -16,7 +16,7 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_max_at_the_middle(self):
         """"testing for at the middle of list"""
-        self.assertEqual(max_integer([1, 2, 3, 4]), 4)
+        self.assertEqual(max_integer([1, 2, 4, 3]), 4)
 
     def test_max_at_the_end(self):
         """"testing for at the end of list"""
@@ -33,6 +33,10 @@ class TestMaxInteger(unittest.TestCase):
     def test_max_at_the_empty(self):
         """"testing for one negative number in the list"""
         self.assertEqual(max_integer([]), None)
+
+    def test_max_at_the_empty(self):
+        """"testing for one negative number in the list"""
+        self.assertEqual(max_integer([5]), 5)
     
 if __name__=='main_':
     unittest.main()
