@@ -8,37 +8,48 @@ class Rectangle(Base):
     '''A subclass of Base class'''
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        '''Instatiation of a new subclass rectangle
+        '''Instantiation of a new subclass rectangle
         Args:
         width and height and x and y and id
         '''
-
         super().__init__(id)
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
 
-    def width_getter(self):
+    @property
+    def width(self):
         '''width method'''
         return self.__width
 
-    def width_setter(self, width):
+    @width.setter
+    def width(self, width):
         self.__width = width
 
-    def height_getter(self):
+    @property
+    def height(self):
         '''height method'''
         return self.__height
 
-    def height_setter(self, height):
+    @height.setter
+    def height(self, height):
         self.__height = height
 
-    def x_getter(self):
+    @property
+    def x(self):
         '''x method'''
         return self.__x
 
-    def x_setter(self, x):
+    @x.setter
+    def x(self, x):
         self.__x = x
 
-    def y_getter(self):
+    @property
+    def y(self):
         '''y method'''
         return self.__y
 
-    def y_setter(self, y):
+    @y.setter
+    def y(self, y):
         self.__y = y
