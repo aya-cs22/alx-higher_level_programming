@@ -120,8 +120,10 @@ class Rectangle(Base):
 
     def display(self):
         """class Rectangle by adding the public method """
+        for g in range(self.y):
+            print()
         for i in range(self.height):
-            print("#" * self.width)
+            print(" " * self.__x + "#" * self.__width)
 
     def __str__(self):
         """Return a string representation of the Rectangle."""
