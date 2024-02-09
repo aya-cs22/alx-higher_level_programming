@@ -127,6 +127,6 @@ class Rectangle(Base):
         """Return a string representation of the Rectangle."""
         s = (
             f"[{Rectangle.__name__}] ({self.id}) "
-            f"{self.__x}/{self.__y} - {self.__width}/{self.__height}"
+            f"{self.x}/{self.y} - {self.width}/{self.height}"
         )
         return s
