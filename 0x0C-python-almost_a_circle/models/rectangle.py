@@ -122,3 +122,6 @@ class Rectangle(Base):
         """class Rectangle by adding the public method """
         for i in range(self.height):
             print("#" * self.width)
+    def __str__(self):
+        """Return a string representation of the Rectangle."""
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
