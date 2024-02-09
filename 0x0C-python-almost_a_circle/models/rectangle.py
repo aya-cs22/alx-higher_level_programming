@@ -15,37 +15,30 @@ class Rectangle(Base):
 
         super().__init__(id)
 
-    @property
-    def width(self):
+    def width_getter(self):
         '''width method'''
         return self.__width
 
-    @width.setter
-    def width(self, width):
+    def width_setter(self, width):
         self.__width = width
 
-    @property
-    def height(self):
+    def height_getter(self):
         '''height method'''
         return self.__height
 
-    @height.setter
-    def height(self, height):
+    def height_setter(self, height):
         self.__height = height
 
-    @property
-    def x(self):
+    def x_getter(self):
         '''x method'''
         return self.__x
 
-    @x.setter
-    def x(self, x):
+    def x_setter(self, x):
         self.__x = x
-    @property
-    def y(self):
+
+    def y_getter(self):
         '''y method'''
         return self.__y
 
-    @y.setter
-    def y(self, y):
+    def y_setter(self, y):
         self.__y = y
