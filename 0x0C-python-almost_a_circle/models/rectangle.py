@@ -132,6 +132,7 @@ class Rectangle(Base):
             f"{self.x}/{self.y} - {self.width}/{self.height}"
         )
         return s
+
     def update(self, *args):
         """Rectangle by adding the public method"""
         if len(args) >= 1:
@@ -144,4 +145,3 @@ class Rectangle(Base):
             self.x = args[3]
         if len(args) >= 5:
             self.y = args[4]
-        
