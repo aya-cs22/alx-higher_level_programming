@@ -1,5 +1,4 @@
 #!/usr/bin/node
-// const args = process.argv;
 let factorial = 1;
 let i;
 const num1 = parseFloat(process.argv[2]);
