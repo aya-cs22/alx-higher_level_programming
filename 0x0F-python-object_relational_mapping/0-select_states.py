@@ -5,11 +5,9 @@
 import MySQLdb
 from sys import argv
 if __name__ == "__main__":
-    port = "3306"
-    host = "localhost"
-    db_access = MySQLdb.connect(username = argv[1], passwd = argv[2], db = argv[3])
+    db_access = MySQLdb.connect(port="3306",host="localhost", username=argv[1], passwd=argv[2], db=argv[3])
     cur = db_access.cursor()
-    cur.excute("SELECT * FROM statesn ORDER BY states.id ASC")
+    cur.excute("SELECT * FROM states ORDER BY states.id ASC")
     rows = cur.ferchall()
     for row in rows:
         print(row)
