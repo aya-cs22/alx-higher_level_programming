@@ -15,7 +15,6 @@ if __name__ == "__main__":
                 """)
     rows = cur.fetchall()
     for row in rows:
-        city_id, city_name, state_name = row
-        print(f"{city_id}, {city_name}, {state_name}")
+        print(row)
     cur.close()
     db_access.close()
