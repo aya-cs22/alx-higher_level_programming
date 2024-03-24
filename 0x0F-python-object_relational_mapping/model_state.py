@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-"""Start link class to table in database 
-"""
+"""Start link class to table in database """
+
+
 from sqlalchemy.ext.declarative import declarative_base
 from model_state import Column, Integer, String
 Base = declarative_base()
+
 
 class State(Base):
     """creat table State"""
