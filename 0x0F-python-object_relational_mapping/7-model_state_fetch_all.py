@@ -15,5 +15,5 @@ Session = sessionmaker(bind=engine)
 session = Session()
 states = session.query(State)
 for state in states:
-    print(state)
+    print(f'{state.id}: {state.name}')
 session.close()
