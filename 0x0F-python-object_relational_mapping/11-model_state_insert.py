@@ -14,8 +14,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     state = session.query(State).order_by(State.id.desc()).first()
-    if state:
-        print(f'{state.id}')
-    else:
-        print("Nothing")
+    newObj = State(name="Louisiana")
+    myState = session.add(newObj)
+    session.commit()
+    print(f'{newObj.id}')
     session.close()
