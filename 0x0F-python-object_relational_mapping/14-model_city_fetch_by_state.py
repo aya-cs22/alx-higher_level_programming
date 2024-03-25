@@ -6,6 +6,7 @@ from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
 from model_city import Base, City
 from sqlalchemy import (create_engine)
+from sys import argv
 
 if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format
