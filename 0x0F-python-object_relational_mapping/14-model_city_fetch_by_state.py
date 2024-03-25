@@ -4,7 +4,7 @@ import sys
 from model_city import City
 from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
-
+from model_city import Base, City
 from sqlalchemy import (create_engine)
 
 if __name__ == "__main__":
@@ -13,7 +13,8 @@ if __name__ == "__main__":
                            pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    city= session.query(City)
-    for cites in city:
-        print(f'{cites.id}: {cites.name}')
+    Base.metadata.create_all(engine)
+    city = session.query(State, City).join(City).order_by(City.id)
+    for state, city in city:
+        print("{}: ({}) {}".format(state.name, city.id, city.name))
     session.close()
