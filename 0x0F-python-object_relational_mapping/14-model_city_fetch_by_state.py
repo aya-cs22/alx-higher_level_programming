@@ -14,6 +14,7 @@ if __name__ == "__main__":
                            pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    Base.metadata.create_all(engine)
-    
+    cities = session.query(City, State).filter(City.state_id == State.id)
+    for city, state in cities:
+        print(f'{state.name}: ({city.id}) {city.name}')
     session.close()
