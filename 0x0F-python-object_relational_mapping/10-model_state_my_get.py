@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""a script that prints the first State object from the database hbtn_0e_6_usa"""
+"""a script that prints the State object with the name passed as argument from the database hbtn_0e_6_usa"""
 import sys
 from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
@@ -12,9 +12,9 @@ if __name__ == "__main__":
                            pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    state = session.query(State).first()
+    state = session.query(State)
     if state:
-        print(f'{state.id}: {state.name}')
+        print(f'{state.id}')
     else:
         print("Nothing")
     session.close()
