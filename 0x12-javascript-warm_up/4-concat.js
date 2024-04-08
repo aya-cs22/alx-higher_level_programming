@@ -1,9 +1,9 @@
 #!/usr/bin/node
 const args = process.argv;
-if (args.length === 2) {
-  console.log('undefined is undefined');
-} else if (args.length === 3) {
+if (process.argv[2]) {
   console.log(`${args[2]} is undefined`);
+} else if (process.argv[3]) {
+  console.log(`${args[3]} is cool`);
 } else {
-  console.log(`${args[2]} is cool`);
+  console.log('undefined is undefined');
 }
