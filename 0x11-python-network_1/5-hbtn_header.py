@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-"""my status"""
+"""Response header value"""
