@@ -2,7 +2,6 @@
 """a Python script that takes in a letter and sends a POST request to URL with the letter as a parameter."""
 import sys
 import requests
-import json
 
 if __name__ == "__main__":
     if len(sys.argv) == 1:
