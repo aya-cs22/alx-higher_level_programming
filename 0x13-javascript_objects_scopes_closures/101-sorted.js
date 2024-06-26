@@ -2,5 +2,8 @@
 
 const { dict } = require('./101-data');
 
-const list = require('./101-data').list;
-console.log(dict);
+for (const key in dict) {
+  if (Object.prototype.hasOwnProperty.call(dict, key)) {
+    console.log(`Key: ${key}, Value: ${dict[key]}`);
+  }
+}
