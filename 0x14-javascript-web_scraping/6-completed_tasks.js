@@ -13,7 +13,7 @@ request(url, function (error, response, body) {
   }
 
   const todos = JSON.parse(body);
-  let userIds = {};
+  const userIds = {};
 
   todos.forEach(todo => {
     if (todo.completed) {
