@@ -2,7 +2,6 @@
 const request = require('request');
 const url = process.argv[2];
 const characterID = 18;
-const characterURL = `https://swapi-api.alx-tools.com/api/people/${characterID}/`;
 
 request(url, function (error, response, body) {
   if (error) {
@@ -18,13 +17,44 @@ request(url, function (error, response, body) {
   let count = 0;
 
   films.forEach(film => {
-    if (film.characters.includes(characterURL)) {
-      count++;
-    }
+    film.characters.forEach(character => {
+      if (character.endsWith(`/${characterID}/`)) {
+        count++;
+        return;
+      }
+    });
   });
 
   console.log(count);
 });
+
+// #!/usr/bin/node
+// const request = require('request');
+// const url = process.argv[2];
+// const characterID = 18;
+// const characterURL = `https://swapi-api.alx-tools.com/api/people/${characterID}/`;
+
+// request(url, function (error, response, body) {
+//   if (error) {
+//     console.error(error);
+//     return;
+//   }
+//   if (response.statusCode !== 200) {
+//     console.log('Error: ' + response.statusCode);
+//     return;
+//   }
+
+//   const films = JSON.parse(body).results;
+//   let count = 0;
+
+//   films.forEach(film => {
+//     if (film.characters.includes(characterURL)) {
+//       count++;
+//     }
+//   });
+
+//   console.log(count);
+// });
 
 // #!/usr/bin/node
 // const request = require('request');
