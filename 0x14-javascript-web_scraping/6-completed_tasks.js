@@ -22,9 +22,6 @@ request(url, function (error, response, body) {
     userIds[todo.userId]++;
   });
 
-  // Format and print the results
-  Object.entries(userIds).forEach(([userId, count]) => {
-    console.log(`'${userId}': ${count},`);
-  });
+  console.log(userIds);
 });
 
