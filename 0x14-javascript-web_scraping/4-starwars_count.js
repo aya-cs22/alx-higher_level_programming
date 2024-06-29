@@ -13,7 +13,7 @@ request(url, function (error, response, body) {
     let count = 0;
     films.forEach(film => {
       film.characters.forEach(character => {
-        if (film.characters.includes(characterURL)) {
+        if (film.characters.some(characterUrl => characterUrl.endsWith('/18/'))) {
           count++;
         }
       });
