@@ -6,11 +6,9 @@ const characterID = 18;
 request(url, function (error, response, body) {
   if (error) {
     console.error(error);
-    // return;
   }
   if (response.statusCode !== 200) {
     console.log(response.statusCode);
-    // return;
   }
 
   const films = JSON.parse(body).results;
@@ -20,7 +18,6 @@ request(url, function (error, response, body) {
     film.characters.forEach(character => {
       if (character.endsWith(`/${characterID}/`)) {
         count++;
-        // return;
       }
     });
   });
