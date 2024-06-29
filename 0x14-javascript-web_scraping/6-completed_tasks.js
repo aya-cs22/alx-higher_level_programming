@@ -16,12 +16,15 @@ request(url, function (error, response, body) {
   let userIds = {};
 
   todos.forEach(todo => {
-    if (!userIds[todo.userId]) {
-      userIds[todo.userId] = 0;
+    if (todo.completed) {
+      if (!userIds[todo.userId]) {
+        userIds[todo.userId] = 0;
+      }
+      userIds[todo.userId]++;
     }
-    userIds[todo.userId]++;
   });
 
   console.log(userIds);
 });
+
 
